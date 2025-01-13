@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' node:" />
+  <link href="./styles.css" rel="stylesheet" />
+  <title>TMaxer</title>
+</head>
+
+<body class="w-full h-full bg-red-100">
+  <section id="sidebar" class="border-right bg-zinc-600/25">
+    <div id="sessions"></div>
+  </section>
+  <main>
+    <div id="titlebar">
+      <div id="title-bar-left-actions"></div>
+      <p id="title"></p>
+      <input type="text" id="search-bar" placeholder="Search..." />
+      <div id="title-bar-right-actions"></div>
+    </div>
+    <div id="tabs"></div>
+    <div id="terminal"></div>
+  </main>
+  <div id="dialog-container"></div>
+  <script src="./renderer.js"></script>
+  <script src="./src/index.js" type="module"></script>
+</body>
+
+</html>

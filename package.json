@@ -1,0 +1,47 @@
+{
+  "name": "Grouper",
+  "version": "1.0.0",
+  "description": "A browser for Tmux sessins",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron . ",
+    "rebuild": "electron-rebuild -f -o node-pty --verbose --python python2",
+    "package": "electron-builder build"
+  },
+  "keywords": [
+    "Tmux",
+    "Browser",
+    "Terminal emulator",
+    "Sessions"
+  ],
+  "dependencies": {
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/addon-webgl": "^0.18.0",
+    "@xterm/xterm": "^5.5.0",
+    "node-pty": "^1.1.0-beta22"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8",
+    "electron-rebuild": "^3.2.9"
+  },
+  "build": {
+    "appId": "com.example.grouper",
+    "productName": "Grouper",
+    "copyright": "Copyright 2023 My Company",
+    "compression": "store",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "public/icons/grouper.icns",
+      "target": [
+        {
+          "target": "default",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    }
+  }
+}
